@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block pg_title %}Sahil{% endblock pg_title %}</title>
+
+    <link rel="stylesheet" href="{% static "app.css" %}">
+    <!-- <link rel="stylesheet" href="{% static "tasks/partials/header.css" %}"> -->
+    
+    {% comment %} <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     {% endcomment %}
+
+
+    <!-- External Stylesheets-->
+    {% block css_style %}
+    
+    
+    {% endblock css_style %}    
+<!-- Css-->
+</head>
+<body>
+
+    <!-- Nav-->
+
+<!--body content-->
+    {% block main_body %}{% endblock main_body  %}
+    
+<!-- Js-->
+{% block js_block %}{% endblock js_block %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- Note you have to mention static in all partials and parent templates in Django-->
+<!-- Template inheritance and loading static files suchs as js,css-->
+
+
+    {%block css_style%}
+    
+    <link rel="stylesheet" href="{% static "index.css" %}">
+
+    {% endblock css_style%}
+
+    {% block main_body%}
+        <h1>Monthly Challenges</h1>
+        <ul>
+            {% for e in mydict%}
+                <li><a href="{{e}}">{{e | title }} </a></li>
+            {% endfor %}
+
+        </ul>   
+    
+        <img src="{% static "images/anime_dp.jpeg" %}"
+    {% endblock main_body %}
+

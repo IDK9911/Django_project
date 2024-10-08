@@ -56,7 +56,13 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR/"templates"
+            BASE_DIR / "Todo" / "templates",
+            BASE_DIR / "Todo" / "templates" / "todo",
+            
+            BASE_DIR/"Simpleton/templates/",
+            BASE_DIR/"Simpleton/templates/simpleton"
+            # in the template folder, i have used smaller case to identify which folder,
+            # for e.g templates/todo instead of Pascal case Todo.
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -119,6 +125,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+
+
+# STATICFILES_DIRS=[
+#     BASE_DIR/"Simpleton"/"static",
+#     BASE_DIR/"Todo"/"static",
+
+# ]
+
+STATICFILES_DIRS=[ 
+    BASE_DIR/ "Simpleton"/"static",
+    BASE_DIR/ "Todo"/"static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

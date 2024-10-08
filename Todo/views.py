@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse
 from django.shortcuts import render,get_object_or_404,redirect
-
+from django.http import Http404,HttpResponse, HttpResponseNotFound,HttpResponseRedirect
 # Create your views here.
 
 
@@ -28,8 +28,7 @@ def index(request):
     return HttpResponse(res)
 
 def index(request):
-    return render(request,"Todo/index.html",{"mydict":mydict})
+    return render(request,"index.html",{"mydict":mydict})
 
 def getMonthlyChallenge(request,month):
-    print(mydict['january'])
     return HttpResponse('Goal is: '+mydict[month.lower()])
